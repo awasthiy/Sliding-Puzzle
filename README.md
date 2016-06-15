@@ -31,4 +31,3 @@ A 4x4 grid of numbered tiles (with one missing) is arranged randomly at start of
 ### Phase 3  
 
 - [ ] Style
-- [ ] Main Screen
