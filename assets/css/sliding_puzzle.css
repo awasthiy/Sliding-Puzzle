@@ -39,6 +39,12 @@ ul {
   border: 5px solid black;
 }
 
+.grid-solution {
+  display: inline-block;
+  margin: 30px auto;
+  border: 5px solid black;
+}
+
 li {
   flex: 1;
   width: 90px;
@@ -48,47 +54,12 @@ li {
   cursor: pointer;
 }
 
-li:hover {
+.grid-puzzle li:hover:not(.empty) {
   background: yellow;
 }
 
-.x,
-.o {
-  background: white;
+.grid-solution li, .empty {
   cursor: default;
-}
-
-.x:hover,
-.o:hover {
-  background: white;
-}
-
-.x:after,
-.o:after {
-  display: block;
-  width: 100%;
-  font-size: 60px;
-  line-height: 80px;
-}
-
-.x:after {
-  content: "x";
-}
-
-.o:after {
-  content: "o";
-}
-
-.game-over li {
-  color: red;
-  cursor: default;
-  background: white;
-}
-
-.winner-x .x,
-.winner-o .o {
-  background: green;
-  color: white;
 }
 
 figcaption {
