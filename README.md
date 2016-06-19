@@ -13,7 +13,6 @@ A 4x4 grid of numbered tiles (with one missing) is arranged randomly at start of
 
 [View wireframes](./docs/wireframes.md)
 
-
 ## Implementation Timeline
 
 ### Phase 1  
