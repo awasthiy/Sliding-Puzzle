@@ -8,6 +8,7 @@ html, body, figure, figcaption, ul, li, h1 {
 
 ul {
   list-style: none;
+  display: table-row;
 }
 
 .group:after {
@@ -20,42 +21,103 @@ body {
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
+  background: rgb(68,81,244);
+}
+
+main {
+  width: 900px;
+  margin: auto;
 }
 
 h1 {
   font-size: 60px;
   margin: 30px;
+  color: black;
+  background: white;
+  padding: 10px;
+  border: 10px solid red;
+  /*text-shadow: 5px 5px 20px black;*/
+  box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.5);
 }
 
-ul {
-  display: flex;
-  /*margin: 30px auto;
-  border: 5px solid black;*/
+.game-window {
+  width: 850px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 .grid-puzzle {
-  display: inline-block;
-  margin: 30px auto;
+  float: left;
+  display: table;
+  table-layout: fixed;
+  width: 500px;
+  height: 500px;
   border: 5px solid black;
+}
+
+.game-info {
+  padding: 30px 0;
+  float: right;
+  width: 250px;
+  border: 5px solid black;
+  background: #ccc;
+  margin: auto;
+}
+
+.game-info > * {
+  margin: 0 auto;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  outline: 0;
+  background: #aaa;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: white;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-info > h2 {
+  padding: 20px 0 5px 0;
 }
 
 .grid-solution {
-  display: inline-block;
-  margin: 30px auto;
-  border: 5px solid black;
+  margin-bottom: 20px;
+  display: table;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
 }
 
 li {
-  flex: 1;
-  width: 90px;
-  height: 90px;
+  display: table-cell;
   border: 5px solid black;
-  background: gray;
+  background: #eee;
   cursor: pointer;
+  vertical-align: middle;
+  font-size: 50px;
+}
+
+.grid-solution li {
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+li.empty {
+  background: transparent;
 }
 
 .grid-puzzle li:hover:not(.empty) {
-  background: yellow;
+  background: rgb(8,208,76);
 }
 
 .grid-solution li, .empty {
