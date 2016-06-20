@@ -2,18 +2,18 @@
   <head>
     <title>Sliding Puzzle</title>
     <link rel="stylesheet" href="./assets/css/sliding_puzzle.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
     <script src="lib/jquery-2.1.1.js"></script>
     <script src="lib/bundle.js"></script>
   </head>
 
   <body>
-    <header>
-    </header>
     <main>
       <h1>Sliding Puzzle</h1>
       <figure class="game-window group">
-        <div class="grid-puzzle"></div>
-
+        <div class="main-game">
+          <div class="grid-puzzle"></div>
+        </div>
         <div class="game-info">
           <form id="new-game">
             <input id="level" type="range" min="3" max="6" step="1" value="3"/>
@@ -29,6 +29,15 @@
           <p class="time">0</p>
         </div>
       </figure>
+      <figcaption class="message"></figcaption>
     </main>
+    <footer>
+      <ul class="icons">
+        <li><a target="_blank" href="http://ericmoy.me"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://github.com/EricMoy/Sliding-Puzzle"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://linkedin.com/in/ericmoy1989"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      </ul>
+      <p>&copy; 2016 Eric Moy. All rights reserved.</p>
+    </footer>
   </body>
 </html>

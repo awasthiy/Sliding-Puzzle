@@ -1,9 +1,11 @@
-html, body, figure, figcaption, ul, li, h1 {
+html, body, figure, figcaption, a, ul, li, h1 {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
 }
 
 ul {
@@ -21,12 +23,13 @@ body {
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
-  background: rgb(68,81,244);
+  background: rgb(50,81,244);
 }
 
 main {
   width: 900px;
   margin: auto;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -36,7 +39,6 @@ h1 {
   background: white;
   padding: 10px;
   border: 10px solid red;
-  /*text-shadow: 5px 5px 20px black;*/
   box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -45,10 +47,14 @@ h1 {
   height: auto;
   margin: 0 auto;
   padding: 30px 0;
+  display: table;
+}
+
+.main-game {
+  display: table-cell;
 }
 
 .grid-puzzle {
-  float: left;
   display: table;
   table-layout: fixed;
   width: 500px;
@@ -57,12 +63,12 @@ h1 {
 }
 
 .game-info {
-  padding: 30px 0;
-  float: right;
+  display: table-cell;
   width: 250px;
   border: 5px solid black;
   background: #ccc;
   margin: auto;
+  vertical-align: middle;
 }
 
 .game-info > * {
@@ -98,7 +104,7 @@ h1 {
   border: 2px solid black;
 }
 
-li {
+.game-window li {
   display: table-cell;
   border: 5px solid black;
   background: #eee;
@@ -120,10 +126,46 @@ li.empty {
   background: rgb(8,208,76);
 }
 
-.grid-solution li, .empty {
+.grid-solution li, li.empty {
   cursor: default;
 }
 
 figcaption {
-  font-size: 30px;
+  font-size: 50px;
+  height: 50px;
+}
+
+footer {
+  width: 900px;
+  margin: 0 auto;
+  height: 100px;
+  display: table;
+}
+
+footer p {
+  color: #eee;
+}
+
+ul.icons > li {
+  display: inline-block;
+  font-size: 50px;
+  color: rgb(212,12,204);
+  width: 100px;
+}
+
+ul.icons > li:hover {
+  display: inline-block;
+  color: rgb(40,40,40)
+}
+
+.icons a {
+  -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  -webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
+
+.game-over li, .game-over .grid-puzzle li:hover {
+  background: #eee;
+  cursor: default;
 }
