@@ -1,32 +1,63 @@
 # Sliding Puzzle
 
-## Minimum Viable Product (MVP)
+[Play Here](http://ericmoy.me/Sliding-Puzzle)
 
-A 4x4 grid of numbered tiles (with one missing) is arranged randomly at start of game. The goal is to move the tiles to get the tiles in order.
+## Screenshot
 
-- [ ] Randomly generate puzzles
-- [ ] Player is allowed to move appropriate tile
-- [ ] Keeps track of amount of moves
-- [ ] Keeps track of time
+[![Game View](/assets/Sliding-Puzzle.png)](http://ericmoy.me/Sliding-Puzzle)
 
-## Wireframes
+## How to Play
 
-[View wireframes](./docs/wireframes.md)
+- The goal of the game is to arrange the tiles in order (as shown in the `Goal`)
+- Click on the tile you want to move; it will shift to the empty spot
 
-## Implementation Timeline
+## Languages
 
-### Phase 1  
+- JavaScript
+- jQuery
+- CSS3
+- HTML
 
-- [ ] Set-up canvas
-- [ ] Develop game logic
- - [ ] Solved
- - [ ] Randomize puzzles
+## Features and Implementation
 
-### Phase 2
+- Object oriented programming in JavaScript
+- Game state is stored in instance variables, preventing browser manipulation
+```javascript
+function Board (gridSize) {
+  this.gridSize = gridSize;
+  this.solution = Board.tileContent(this.gridSize);
+  this.grid = this.makeGrid(Board.makeSolvable(this.solution));
+}
+```
+- [Durstenfeld shuffle](http://en.wikipedia.org/wiki/Fisher-Yates_shuffle#The_modern_algorithm) (A computer-optimized version of Fisher-Yates) was used to provide randomized puzzles
+```javascript
+function shuffleArray(array) {
+  var shuffled = array.slice(0);
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = shuffled[i];
+      shuffled[i] = shuffled[j];
+      shuffled[j] = temp;
+  }
+  return shuffled;
+}
+```
+- Recursion was used to generate a solvable puzzle
+```javascript
+Board.makeSolvable = function (array) {
+  var tileArray = shuffleArray(array);
+  if (Board.isSolvable(tileArray)) {
+    return tileArray;
+  } else {
+    return Board.makeSolvable(tileArray);
+  }
+};
+```
 
-- [ ] Moves
-- [ ] Time
+## To-dos/Future Features
 
-### Phase 3  
-
-- [ ] Style
+- Use images instead of numbers
+- Implement sliding animation
+- High scores
+- Leaderboard
+- User uploaded images
