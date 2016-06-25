@@ -113,6 +113,10 @@ h1 {
   font-size: 50px;
 }
 
+.game-window li:before {
+  content: attr(value);
+}
+
 .grid-solution li {
   border: 2px solid black;
   font-size: 20px;
