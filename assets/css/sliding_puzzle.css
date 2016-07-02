@@ -169,7 +169,7 @@ ul.icons > li:hover {
   transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 }
 
-.game-over li, .game-over .grid-puzzle li:hover {
+.game-over li, .game-over.grid-puzzle li:hover {
   background: #eee;
   cursor: default;
 }
