@@ -19,21 +19,22 @@
           </div>
         </div>
         <div class="game-info">
-          <form id="new-game">
+          <div>
             <input id="level" type="range" min="2" max="6" step="1" value="3"/>
             <p id="rangeText">Grid Size: 3 x 3</p>
-            <input class="button" type="submit" value="New Game" />
-          </form>
+            <input id="new-game" class="button" type="button"  value="New Game" />
+            <input id="solver" class="button" type="button" value="Solver" />
+          </div>
           <h2>Goal</h2>
           <div id="grid-solution-area">
             <img src="https://placeimg.com/200/200/nature" alt="Start a new game!" title="Start a new game!">
             <div id="grid-solution"></div>
           </div>
-          <div>Moves: </div>
-          <p class="moves">0</p>
+          <h2>Moves: </h2>
+          <h3 class="moves">0</h3>
           <br/>
-          <div>Time: </div>
-          <p class="time">0</p>
+          <h2>Time: </h2>
+          <h3 class="time">0</h3>
         </div>
       </figure>
     </main>
