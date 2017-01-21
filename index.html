@@ -12,7 +12,10 @@
       <h1>Sliding Puzzle</h1>
       <figure class="game-window group">
         <div class="main-game">
-          <div class="grid-puzzle"></div>
+          <div id="grid-puzzle-area">
+            <img src="https://placeimg.com/500/500/nature" alt="Start a new game!" title="Start a new game!">
+            <div id="grid-puzzle"></div>
+          </div>
         </div>
         <div class="game-info">
           <form id="new-game">
@@ -21,7 +24,10 @@
             <input class="button" type="submit" value="New Game" />
           </form>
           <h2>Goal</h2>
-          <div class="grid-solution"></div>
+          <div id="grid-solution-area">
+            <img src="https://placeimg.com/200/200/nature" alt="Start a new game!" title="Start a new game!">
+            <div id="grid-solution"></div>
+          </div>
           <div>Moves: </div>
           <p class="moves">0</p>
           <br/>
