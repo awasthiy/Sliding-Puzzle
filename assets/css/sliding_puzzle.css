@@ -206,6 +206,6 @@ ul.icons > li:hover {
 }
 
 .game-over li, #grid-puzzle.game-over li:hover {
-  background: rgba(255,255,255,0.55);
+  background: rgb(255, 251, 185);
   cursor: default;
 }
