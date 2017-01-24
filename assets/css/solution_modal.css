@@ -14,19 +14,24 @@
 
 /* Modal Content/Box */
 .modal-content {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 10px;
+  padding: 30px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 700px;
 }
 
 /* The Close Button */
 .close {
-  padding: 0 5px;
-  float: right;
+  padding: 3 8px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
   font-size: 28px;
-  color: red;
+  background: red;
+  color: white;
+  border-radius: 50%;
 }
 
 .unselectable {
@@ -39,11 +44,37 @@
 
 .close:hover {
   cursor: pointer;
-  background: red;
-  color: white;
 }
 
 .close:active {
   color: white;
   background: rgb(200,0,0);
+}
+
+#grid-solver {
+  float: left;
+  width: 450px;
+  height: 450px;
+  border: 5px solid black;
+}
+
+#grid-solver li {
+  font-size: 45px;
+  border: 5px solid black;
+}
+
+#play-div {
+  float: left;
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+}
+
+#solver-steps {
+  width: 500px;
+}
+
+#solver-play {
+  width: initial;
+  margin-left: auto;
 }
