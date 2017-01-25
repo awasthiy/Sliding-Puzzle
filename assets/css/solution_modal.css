@@ -96,4 +96,29 @@
   overflow: scroll;
   flex: 1;
   border: 2px inset #dedede;
+  text-align: left;
+  font-weight: normal;
 }
+
+#solver-text > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+#solver-text li {
+  padding: 2px;
+}
+
+#solver-text li:not(:last-child) {
+  border-bottom: 1px solid #bbb;
+}
+
+#solver-text span {
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+  margin: 0 10px;
+}
+
+
