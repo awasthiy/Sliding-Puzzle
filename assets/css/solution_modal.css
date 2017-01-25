@@ -125,3 +125,7 @@
   text-align: right;
   margin: 0 10px;
 }
+
+#solver-text li.current {
+  background: rgba(0,0,255,.25);
+}
