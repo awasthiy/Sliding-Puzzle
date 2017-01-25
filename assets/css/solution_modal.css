@@ -110,6 +110,11 @@
   padding: 2px;
 }
 
+#solver-text li:hover {
+  cursor: pointer;
+  background: rgba(0,255,0,.25);
+}
+
 #solver-text li:not(:last-child) {
   border-bottom: 1px solid #bbb;
 }
@@ -120,5 +125,3 @@
   text-align: right;
   margin: 0 10px;
 }
-
-
