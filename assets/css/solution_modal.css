@@ -78,3 +78,22 @@
   width: 75px;
   margin-left: auto;
 }
+
+#solver-detail {
+  float: right;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  height: 460px;
+}
+
+#solver-detail > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#solver-text {
+  background: rgba(255,255,255,0.55);
+  overflow: scroll;
+  flex: 1;
+  border: 2px inset #dedede;
+}

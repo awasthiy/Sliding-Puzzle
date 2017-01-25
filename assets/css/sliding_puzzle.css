@@ -1,4 +1,5 @@
-html, body, figure, figcaption, a, ul, li, h1 {
+html, body, figure, a, 
+ul, li, h1, h2, h3 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -38,6 +39,14 @@ h1 {
   font-size: 120px;
   margin-bottom: 30px;
   color: rgb(23, 149, 202);
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 .game-window {
@@ -117,7 +126,6 @@ h1 {
 
 #grid-solution-area {
   position: relative;
-  margin-bottom: 10px;
   width: 200px;
   height: 200px;
   border: 2px solid black;
@@ -205,7 +213,7 @@ ul.icons > li:hover {
   transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 }
 
-.game-over li, #grid-puzzle.game-over li:hover {
+#grid-puzzle.game-over li:hover:not(.empty) {
   background: rgb(255, 251, 185);
   cursor: default;
 }
