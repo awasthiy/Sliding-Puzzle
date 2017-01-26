@@ -19,6 +19,7 @@
   margin: auto;
   padding: 30px;
   border: 1px solid #888;
+  min-width: 700px;
   width: 700px;
 }
 
@@ -81,7 +82,7 @@
 
 #solver-detail {
   float: right;
-  width: 210px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   height: 460px;
@@ -93,7 +94,7 @@
 
 #solver-text {
   background: rgba(255,255,255,0.55);
-  overflow: scroll;
+  overflow-y: scroll;
   flex: 1;
   border: 2px inset #dedede;
   text-align: left;
